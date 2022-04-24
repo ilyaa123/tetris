@@ -1,3 +1,9 @@
+html{
+    box-sizing: border-box;
+}
+*{
+    box-sizing: inherit;
+}
 h1{
     text-align: center;
     margin-bottom: 50px;
@@ -13,10 +19,38 @@ body{
 .container{
     width: 500px;
     margin: 0 auto;
+    display: grid;
+    gap: 50px;
+    align-items: flex-start;
+    grid-template-areas: 
+    'game next'
+    'game score';
 }
 .game-area{
     border: solid #070024;
     border-width: 0 2px 3px 2px;
     display: block;
 
+}
+.end-tetris{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.9;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.end-tetris > h4{
+    font-size: 26px;
+}
+.end-tetris > p{
+    font-size: 18px;
+}
+.end-tetris > h5{
+    font-size: 22px;
 }
